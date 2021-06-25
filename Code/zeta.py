@@ -86,7 +86,7 @@ def cutoff( x_sq, n_sq, alpha ):
  KSS Zeta function for ell = m_ell = 0, given "x_sq", total momentum "nP"
  This function is in units of L / 2pi, e.g. m1 -> m1 * L / (2 * pi).
 '''
-def zetaFunction( x_sq, nP, alpha, nShell ):
+def zetaFunction( x_sq, nP, alpha ):
     Ecm = np.sqrt( m1_sq + x_sq ) + np.sqrt( m2_sq + x_sq )
     beta = nP / np.sqrt( Ecm * Ecm + np.dot(nP,nP) )    
 
