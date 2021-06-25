@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 import itertools
 import math as m
 import numpy as np
@@ -138,16 +140,23 @@ Ecm_o_m_step = 0.01
 #zeta = zetaFunction( x_sq(Ecm), nP, alpha, nShell )
 #print( Ecm / m1, " ", x_sq(Ecm), " ", zeta.real, " ", zeta.imag )
 
+EcmRange = np.arange(Ecm_o_m_start, Ecm_o_m_stop, Ecm_o_m_step)
+zetaData_real = []
+zetaData_imag = []
 
 t1 = time.time()
-for Ecm in np.arange (Ecm_o_m_start, Ecm_o_m_stop, Ecm_o_m_step):
+for Ecm in EcmRange:
    Ecm = Ecm * m1
    zeta = zetaFunction( x_sq(Ecm), nP, alpha, nShell )
+   zetaData_real.append(zeta.real)
+   zetaData_imag.append(zeta.imag)
    print( Ecm / m1, " ", x_sq(Ecm), " ", zeta.real, " ", zeta.imag )
 t2 = time.time()
 #print("it took this long to calculate",t2-t1)
 
-
+plt.plot(EcmRange, zetaData_real, label="real")
+plt.plot(EcmRange, zetaData_imag, label="imag")
+plt.show()
 
 
 print(" ")
