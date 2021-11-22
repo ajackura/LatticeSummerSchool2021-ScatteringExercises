@@ -3,6 +3,7 @@
 Exercises for the "Problem Solving in Lattice QCD" summer school, 
 https://sites.google.com/uw.edu/lqcdschool2021
 
+<!--
 
 ## Outline
 
@@ -29,3 +30,5 @@ Here is a rough outline for the exercises:
 * Single hadron Lorentz decomposition of form-factors
 * 1+J->2: Lorentz decomposition, analytic representation, Watson's theorem
 * FV: LL factors, trace relation
+
+-->
